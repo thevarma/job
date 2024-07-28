@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Your Resume - Jobs4U</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('https://wallpapercave.com/wp/wp2694479.jpg') center/cover no-repeat; 
+            font-family: 'Arial', sans-serif;
+            color: rgb(158, 14, 14);
+        }
+
+        #resume-upload {
+            background: rgba(255, 255, 255, 0.2); 
+            backdrop-filter: blur(3px); 
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+            color: rgb(7, 7, 8);
+        }
+
+        #resume-upload h1 {
+            margin-bottom: 20px;
+        }
+
+        #resume-upload label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        #resume-upload input[type="file"] {
+            display: none;
+        }
+
+        #resume-upload label.upload-button {
+            background-color: #e59009;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        #resume-upload label.upload-button:hover {
+            background-color: #f5a623;
+        }
+
+        #resume-upload #file-info {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="resume-upload">
+        <h1>Upload Your Resume</h1>
+        <form action="upload.php" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" id="resume"> <!-- Added ID "resume" to target in JavaScript -->
+            <label for="resume" class="upload-button">Select File</label> <!-- Button label -->
+            <button type="submit" name="submit">Upload File</button>
+        </form>
+        
+    </div>
+
+    <script>
+        document.getElementById('resume').addEventListener('change', function() {
+            var file = this.files[0];
+            var fileInfo = document.getElementById('file-info');
+            fileInfo.innerHTML = '';
+            if (file) {
+                var fileSize = Math.round(file.size / 1024 / 1024 * 100) / 100;
+                fileInfo.innerHTML += '<p>File Name: ' + file.name + '</p>';
+                fileInfo.innerHTML += '<p>File Size: ' + fileSize + ' MB</p>';
+            }
+        });
+    </script>
+</body>
+</html>

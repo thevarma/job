@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jobs - Jobs4U</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('https://wallpapercave.com/wp/wp2694479.jpg') center/cover no-repeat; 
+            font-family: 'Arial', sans-serif;
+            color: rgb(158, 14, 14);
+        }
+
+        #jobs-section {
+            background: rgba(255, 255, 255, 0.2); 
+            backdrop-filter: blur(3px); 
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: left;
+            max-width: 800px;
+            width: 100%;
+            color: rgb(7, 7, 8);
+        }
+
+        #jobs-section h1 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        #search-bar {
+            margin-bottom: 20px;
+        }
+
+        #search-bar input[type="text"] {
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .job-listing {
+            margin-bottom: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .job-listing h2 {
+            margin-bottom: 5px;
+        }
+
+        .job-listing p {
+            margin-bottom: 5px;
+        }
+
+        .job-listing .details {
+            margin-top: 5px;
+            font-style: italic;
+        }
+
+        .apply-button {
+            background-color: #e59009;
+            color: #fff;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .apply-button:hover {
+            background-color: #f5a623;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="jobs-section">
+        <h1>Available Jobs</h1>
+        <div id="search-bar">
+            <input type="text" id="search-input" placeholder="Search for jobs...">
+        </div>
+        <div class="job-listing">
+            <h2>Web Developer</h2>
+            <p>Company: TechSolutions Inc.</p>
+            <p>Location: Remote</p>
+            <p>Description: We are seeking a skilled web developer to join our team. Experience with HTML, CSS, and JavaScript required.</p>
+            <p class="details">Posted on: April 15, 2024</p>
+            <button class="apply-button" onclick="window.location.href='submitresume.html'">Apply</button>
+        </div>
+        <div class="job-listing">
+            <h2>Graphic Designer</h2>
+            <p>Company: CreativeWorks Studio</p>
+            <p>Location: New York, NY</p>
+            <p>Description: Looking for a talented graphic designer to create engaging visuals for our marketing campaigns.</p>
+            <p class="details">Posted on: April 14, 2024</p>
+            <button class="apply-button" onclick="window.location.href='submitresume.html'">Apply</button>
+        </div>
+        <div class="job-listing">
+            <h2>Content Writer</h2>
+            <p>Company: Wordsmiths Co.</p>
+            <p>Location: Remote</p>
+            <p>Description: We're hiring a creative writer to produce high-quality content for our blog and social media channels.</p>
+            <p class="details">Posted on: April 13, 2024</p>
+            <button class="apply-button" onclick="window.location.href='submitresume.html'">Apply</button>
+        </div>
+        <!-- Add more fake job listings here -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post a Job - Jobs4U</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('https://wallpapercave.com/wp/wp2694479.jpg') center/cover no-repeat; 
+            font-family: 'Arial', sans-serif;
+            color: rgb(158, 14, 14);
+        }
+
+        #job-posting {
+            background: rgba(255, 255, 255, 0.2); 
+            backdrop-filter: blur(3px); 
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: left;
+            max-width: 600px;
+            width: 100%;
+            color: rgb(7, 7, 8);
+        }
+
+        #job-posting h1 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        #job-posting label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        #job-posting input[type="text"],
+        #job-posting textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        #job-posting textarea {
+            height: 100px;
+        }
+
+        #job-posting button {
+            background-color: #e59009;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #job-posting button:hover {
+            background-color: #f5a623;
+        }
+    </style>
+</head>
+<body>
+    <div id="job-posting">
+        <h1>Post a Job</h1>
+        <form action="./postajob.php" method="post">
+            <label for="job-type">Type of Job:</label>
+            <input type="text" id="job-type" name="job-type" required>
+
+            <label for="company">Company:</label>
+            <input type="text" id="company" name="company" required>
+
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" required>
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" required></textarea>
+
+            <label for="posted-on">Posted on:</label>
+            <input type="date" id="posted-on" name="posted-on" required>
+
+            <button type="submit">Post Job</button>
+        </form>
+    </div>
+</body>
+</html>
